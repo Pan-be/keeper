@@ -1,15 +1,12 @@
 import Header from "./components/Header"
 import Footer from "./components/Footer"
-import Note from "./components/Note"
-import notes from "./notes"
+import NotesList from "./components/NotesList"
 
 const App = () => {
 	return (
 		<>
 			<Header />
-			{notes.map((note) => {
-				return <Note title={note.title} />
-			})}
+			<NotesList />
 			<Footer />
 		</>
 	)
