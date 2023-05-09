@@ -1,9 +1,14 @@
 import Note from "./Note"
-import notes from "../notes"
 
-const NotesList = () => {
-	return notes.map((note) => (
-		<Note title={note.title} content={note.content} key={note.key} />
+const NotesList = (props) => {
+	return props.notes.map((note, id) => (
+		<Note
+			title={note.noteTitle}
+			content={note.noteContent}
+			key={id}
+			id={id}
+			deleteNote={props.deleteNote}
+		/>
 	))
 }
 
